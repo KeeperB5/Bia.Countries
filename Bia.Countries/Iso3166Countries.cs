@@ -344,7 +344,7 @@ namespace Bia.Countries
                 { "Yemen", new Iso3166Country { Name = "Yemen", Alpha2 = "YE", Alpha3 = "YEM", Numeric = 887 } },
                 { "Zambia", new Iso3166Country { Name = "Zambia", Alpha2 = "ZM", Alpha3 = "ZMB", Numeric = 894 } },
                 { "Zimbabwe", new Iso3166Country { Name = "Zimbabwe", Alpha2 = "ZW", Alpha3 = "ZWE", Numeric = 716 } },
-                { "Åland Islands", new Iso3166Country { Name = "Åland Islands", Alpha2 = "AX", Alpha3 = "ALA", Numeric = 248 } },
+                { "Åland Islands", new Iso3166Country { Name = "Åland Islands", Alpha2 = "AX", Alpha3 = "ALA", Numeric = 248 } }
             };
         }
     }
