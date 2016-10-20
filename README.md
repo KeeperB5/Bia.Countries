@@ -120,7 +120,7 @@ $islands = [Bia.Countries.Iso3166Countries]::GetCountryByPartialActiveDirectoryN
 ### Install
 
 * [NuGet](https://www.nuget.org/packages/Bia.Countries/)
-* [PowerShell Gallery](https://www.powershellgallery.com/packages/Bia.Countries/1.0)
+* [PowerShell Gallery](https://www.powershellgallery.com/packages/Bia.Countries/)
 
 ### Resources
 
