@@ -1,11 +1,11 @@
-Function Get-AllShortNames
+Function Get-BiaAllShortNames
 {
 	<#
 	.SYNOPSIS
 	Get all short country names as they appear in the ISO 3166-1 standard.
 
 	.EXAMPLE
-	$shortNames = Get-AllShortNames
+	$shortNames = Get-BiaAllShortNames
 	#>
 	
 	[OutputType([string[]])]
@@ -14,14 +14,14 @@ Function Get-AllShortNames
 	[Bia.Countries.Iso3166Countries]::GetAllShortNames()
 }
 
-Function Get-AllActiveDirectoryNames
+Function Get-BiaAllActiveDirectoryNames
 {
 	<#
 	.SYNOPSIS
 	Get all country names as they appear in Microsoft Active Directory Users and Computers on Windows Server 2012 R2.
 	
 	.EXAMPLE
-	$adNames = Get-AllActiveDirectoryNames
+	$adNames = Get-BiaAllActiveDirectoryNames
 	#>
 	
 	[OutputType([string[]])]
@@ -30,7 +30,7 @@ Function Get-AllActiveDirectoryNames
 	[Bia.Countries.Iso3166Countries]::GetAllActiveDirectoryNames()
 }
 
-Function Get-CountryByShortName
+Function Get-BiaCountryByShortName
 {
 	<#
 	.SYNOPSIS
@@ -40,7 +40,7 @@ Function Get-CountryByShortName
 	Specifies a name to look for. If name does not exist, a null is returned.
 	
 	.EXAMPLE
-	$brazil = Get-CountryByShortName Brazil
+	$brazil = Get-BiaCountryByShortName Brazil
 	#>
 	
 	[OutputType([string[]])]
@@ -55,7 +55,7 @@ Function Get-CountryByShortName
 	[Bia.Countries.Iso3166Countries]::GetCountryByShortName($ShortName)
 }
 
-Function Get-CountryByFullName
+Function Get-BiaCountryByFullName
 {
 	<#
 	.SYNOPSIS
@@ -65,7 +65,7 @@ Function Get-CountryByFullName
 	Specifies a name to look for. If name does not exist, a null is returned.
 	
 	.EXAMPLE
-	$norway = Get-CountryByFullName "the Kingdom of Norway"
+	$norway = Get-BiaCountryByFullName "the Kingdom of Norway"
 	#>
 	
 	[OutputType([Bia.Countries.Iso3166Country])]
@@ -80,7 +80,7 @@ Function Get-CountryByFullName
 	[Bia.Countries.Iso3166Countries]::GetCountryByFullName($FullName)
 }
 
-Function Get-CountryByActiveDirectoryName
+Function Get-BiaCountryByActiveDirectoryName
 {
 	<#
 	.SYNOPSIS
@@ -90,7 +90,7 @@ Function Get-CountryByActiveDirectoryName
 	Specifies a name to look for. If name does not exist, a null is returned.
 	
 	.EXAMPLE
-	$russia = Get-CountryByActiveDirectoryName Russia
+	$russia = Get-BiaCountryByActiveDirectoryName Russia
 	#>
 	
 	[OutputType([Bia.Countries.Iso3166Country])]
@@ -105,7 +105,7 @@ Function Get-CountryByActiveDirectoryName
 	[Bia.Countries.Iso3166Countries]::GetCountryByActiveDirectoryName($ActiveDirectoryName)
 }
 
-Function Get-CountryByAlpha2
+Function Get-BiaCountryByAlpha2
 {
 	<#
 	.SYNOPSIS
@@ -115,7 +115,7 @@ Function Get-CountryByAlpha2
 	Specifies an alpha 2 code to look for. If code does not exist, a null is returned.
 	
 	.EXAMPLE
-	$usa = Get-CountryByAlpha2 US
+	$usa = Get-BiaCountryByAlpha2 US
 	#>
 	
 	[OutputType([Bia.Countries.Iso3166Country])]
@@ -130,7 +130,7 @@ Function Get-CountryByAlpha2
 	[Bia.Countries.Iso3166Countries]::GetCountryByAlpha2($Alpha2)
 }
 
-Function Get-CountryByAlpha3
+Function Get-BiaCountryByAlpha3
 {
 	<#
 	.SYNOPSIS
@@ -139,7 +139,7 @@ Function Get-CountryByAlpha3
 	.PARAMETER Alpha3
 	Specifies an alpha 3 code to look for. If code does not exist, a null is returned.
 	
-	$china = Get-CountryByAlpha3 CHN
+	$china = Get-BiaCountryByAlpha3 CHN
 	#>
 	
 	[OutputType([Bia.Countries.Iso3166Country])]
@@ -154,7 +154,7 @@ Function Get-CountryByAlpha3
 	[Bia.Countries.Iso3166Countries]::GetCountryByAlpha3($Alpha3)
 }
 
-Function Get-CountryByNumeric
+Function Get-BiaCountryByNumeric
 {
 	<#
 	.SYNOPSIS
@@ -164,7 +164,7 @@ Function Get-CountryByNumeric
 	Specifies n numeric code to look for. If code does not exist, a null is returned.
 	
 	.EXAMPLE
-	$uk = Get-CountryByNumeric 826
+	$uk = Get-BiaCountryByNumeric 826
 	#>
 	
 	[OutputType([Bia.Countries.Iso3166Country])]
@@ -179,7 +179,7 @@ Function Get-CountryByNumeric
 	[Bia.Countries.Iso3166Countries]::GetCountryByNumeric($Numeric)
 }
 
-Function Get-CountryByPartialShortName
+Function Get-BiaCountryByPartialShortName
 {
 	<#
 	.SYNOPSIS
@@ -189,7 +189,7 @@ Function Get-CountryByPartialShortName
 	Specifies a partial, case-insensitive name to look for. If name does not exist, an empty List is returned.
 	
 	.EXAMPLE
-	$lands = Get-CountryByPartialShortName land
+	$lands = Get-BiaCountryByPartialShortName land
 	
 	There are 29 countries that have string "land" in ISO 3166-1 short name.
 	#>
@@ -206,7 +206,7 @@ Function Get-CountryByPartialShortName
 	[Bia.Countries.Iso3166Countries]::GetCountryByPartialShortName($PartialShortName)
 }
 
-Function Get-CountryByPartialFullName
+Function Get-BiaCountryByPartialFullName
 {
 	<#
 	.SYNOPSIS
@@ -216,7 +216,7 @@ Function Get-CountryByPartialFullName
 	Specifies a partial, case-insensitive name to look for. If name does not exist, an empty List is returned.
 	
 	.EXAMPLE
-	$kingdoms = Get-CountryByPartialFullName kingdom
+	$kingdoms = Get-BiaCountryByPartialFullName kingdom
 	
 	There are 17 countries that have string "kingdom" in ISO 3166-1 full name.
 	#>
@@ -233,7 +233,7 @@ Function Get-CountryByPartialFullName
 	[Bia.Countries.Iso3166Countries]::GetCountryByPartialFullName($PartialFullName)
 }
 
-Function Get-CountryByPartialActiveDirectoryName
+Function Get-BiaCountryByPartialActiveDirectoryName
 {
 	<#
 	.SYNOPSIS
@@ -243,7 +243,7 @@ Function Get-CountryByPartialActiveDirectoryName
 	Specifies a partial, case-insensitive name to look for. If name does not exist, an empty List is returned.
 	
 	.EXAMPLE
-	$islands = Get-CountryByPartialActiveDirectoryName island
+	$islands = Get-BiaCountryByPartialActiveDirectoryName island
 	
 	There are 25 countries that have string "island" in Active Directory name.
 	#>
